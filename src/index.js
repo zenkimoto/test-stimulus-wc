@@ -1,5 +1,6 @@
 // Include Web Components
 import './web/hello_world'
+import './web/author'
 
 // Setup Stimulus
 import { Application } from "@hotwired/stimulus"

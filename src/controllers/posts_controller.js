@@ -9,10 +9,14 @@ export default class extends Controller {
                                               <td><button data-action="click->posts#clicked" data-id="${c.userId}">View Author</button></td>
                                               </tr>${acc}`, ''))
       .then(html => this.element.innerHTML = html);
+    // Dynamically add data action posts#clicked
   }
 
   clicked(event) {
-    console.log(`clicked ${event.currentTarget.textContent.trim()}`)
-    console.log('ID: ' + event.currentTarget.dataset.id);
+    // Get id value from data attribute
+    const userId = event.currentTarget.dataset.id;
+
+    // dynamically set web component attribute
+    document.getElementById('author-detail').setAttribute('user-id', userId);
   }
 }

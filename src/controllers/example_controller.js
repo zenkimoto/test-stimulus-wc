@@ -4,6 +4,7 @@ export default class extends Controller {
   connect() {
     this.element.textContent = "It works!";
 
+    // Listening to Web Component events
     addEventListener('hello_clicked', (event) => {
 
       const comp = document.getElementById('hello_world_comp');
