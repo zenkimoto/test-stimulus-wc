@@ -10,21 +10,7 @@
       <!-- Web Component -->
       <hello-world id="hello_world_comp" color="#0000ff">
         <!-- Add Slot -->
-        <span slot="text">Hello, World!</span>
+        <span slot="text">Click Me!</span>
       </hello-world>
-      <!--    <script src="./web/hello_world.js"></script> -->
-      <script>
-      // Testing web component interaction/communication
-
-      // Listen for web component events
-      addEventListener('hello_clicked', (event) => {
-        console.log('Hello, World clicked!!!');
-
-        const comp = document.getElementById('hello_world_comp');
-
-        // Passing data in dynamically
-        comp.setAttribute('color', '#ff0000');
-      }); 
-      </script>
     </body>
 </html>
