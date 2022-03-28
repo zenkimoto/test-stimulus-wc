@@ -3,7 +3,7 @@ const express = require("express");
 
 const app = express();
 const port = 3000;
-const public = path.join(__dirname, "../public");
+const public = path.join(__dirname, "./dist");
 
 app.use(express.static(public));
 
