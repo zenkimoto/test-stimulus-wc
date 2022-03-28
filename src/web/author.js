@@ -25,7 +25,8 @@ class Author extends HTMLElement {
     fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
       .then(response => response.json())
       .then(json => `<p>${json.name}</p><p>${json.username}</p><p>${json.email}</p>`)
-      .then(html => this.shadowRoot.getElementById('author-data').innerHTML = html);
+      .then(html => this.shadowRoot.getElementById('author-data').innerHTML = html)
+      .then(_ => this.notifyLoad());
   }
 
   notifyLoad() {
